@@ -5,7 +5,6 @@
       <div class="el-upload__text" v-html="$t('upload.text')"></div>
       <template v-slot:tip>
         <div class="el-upload__tip">
-          {{ t("upload.tip", { format: "jpg、png、gif" }) }}
         </div>
       </template>
     </el-upload>
@@ -36,10 +35,6 @@ const init = () => {
 
 // 上传之前
 const beforeUploadHandle = (file: IObject) => {
-  if (file.type !== "image/jpg" && file.type !== "image/jpeg" && file.type !== "image/png" && file.type !== "image/gif") {
-    ElMessage.error(t("upload.tip", { format: "jpg、png、gif" }));
-    return false;
-  }
   num.value++;
 };
 

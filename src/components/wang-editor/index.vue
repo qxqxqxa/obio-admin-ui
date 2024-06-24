@@ -1,5 +1,5 @@
 <template>
-  <div style="border: 1px solid #ccc; z-index: 100">
+  <div style="border: 1px solid #ccc; width: 100%; z-index: 100 ">
     <!-- 工具栏 -->
     <Toolbar :editor="editorRef" :mode="mode" style="border-bottom: 1px solid #ccc" />
     <!-- 编辑器 -->
