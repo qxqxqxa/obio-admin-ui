@@ -67,7 +67,7 @@ const view = reactive({
   daterange: null,
   dataForm: {
     title: "",
-    categoryId: "",
+    categoryId: "0",
     status: "0",
     startDate: null as number | null,
     endDate: null as number | null
@@ -99,7 +99,7 @@ const addOrUpdateHandle = (id?: number) => {
 };
 
 const init = () => {
-  baseService.get("/cms/categories/public/list?pid=100").then((res) => {
+  baseService.get("/cms/categories/all/list?pid=100").then((res) => {
     categories.value = res.data;
   });
 }
