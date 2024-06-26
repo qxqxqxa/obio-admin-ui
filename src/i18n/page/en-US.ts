@@ -224,7 +224,7 @@ t.sms.qcloudTemplateId = "SMS Template";
 t.sms.qcloudTemplateIdTips = "SMS template ID";
 
 t.oss = {};
-t.oss.config = "Cloud Storage Configuration";
+t.oss.config = "Storage Configuration";
 t.oss.upload = "Upload File";
 t.oss.name = "File Name";
 t.oss.url = "URL Address";

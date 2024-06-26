@@ -39,7 +39,7 @@ export default defineComponent({
       () => store.state.appIsLogin,
       (vl) => {
         if (vl) {
-          ws();
+          // ws();
         }
       }
     );

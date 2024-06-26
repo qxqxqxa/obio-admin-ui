@@ -12,7 +12,7 @@
           <el-form-item>
             <el-button type="primary" @click="state.getDataList()">{{ $t("query") }}</el-button>
           </el-form-item>
-          <el-form-item v-if="false">
+          <el-form-item >
             <el-button type="primary" @click="configHandle()">{{ $t("oss.config") }}</el-button>
           </el-form-item>
           <el-form-item>

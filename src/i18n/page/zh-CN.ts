@@ -223,7 +223,7 @@ t.sms.qcloudTemplateId = "短信模板";
 t.sms.qcloudTemplateIdTips = "短信模板ID";
 
 t.oss = {};
-t.oss.config = "云存储配置";
+t.oss.config = "存储配置";
 t.oss.upload = "上传文件";
 t.oss.name = "文件名称";
 t.oss.url = "URL地址";
