@@ -568,4 +568,5 @@ t.service.createDate = "CreateDate";
 t.service.content = "Content";
 t.service.summary = "Summary";
 t.service.sort = "Sort";
+t.service.selectCategory = "Select Category";
 export default t;

@@ -2,7 +2,7 @@
   <div class="mod-demo__news">
     <el-form :inline="true" :model="state.dataForm" @keyup.enter="state.getDataList()">
       <el-form-item style="width: 190px;">
-        <el-tree-select v-model="state.dataForm.categoryId" ref="articlesTree" :data="categories" :props="{ label: 'name', children: 'children' }" :render-after-expand="false" accordion :expand-on-click-node="true" node-key="id" :highlight-current="true"/>
+        <el-tree-select clearable :placeholder="$t('service.selectCategory')" v-model="state.dataForm.categoryId" ref="articlesTree" :data="categories" :props="{ label: 'name', children: 'children' }" :render-after-expand="false" accordion :expand-on-click-node="true" node-key="id" :highlight-current="true"/>
       </el-form-item>
       <el-form-item style="width: 190px;">
         <el-select v-model="state.dataForm.status">
@@ -67,7 +67,7 @@ const view = reactive({
   daterange: null,
   dataForm: {
     title: "",
-    categoryId: "0",
+    categoryId: "",
     status: "0",
     startDate: null as number | null,
     endDate: null as number | null
@@ -99,7 +99,7 @@ const addOrUpdateHandle = (id?: number) => {
 };
 
 const init = () => {
-  baseService.get("/cms/categories/list?type=0").then((res) => {
+  baseService.get("/cms/categories/public/list?pid=100").then((res) => {
     categories.value = res.data;
   });
 }

@@ -25,24 +25,25 @@
       <el-row>
         <el-col span="12">
           <el-form-item prop="pubDate" label="Publish Time">
-            <el-date-picker v-model="dataForm.pubDate" type="datetime" format="YYYY-MM-DD HH:mm:ss" value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker>
+            <el-date-picker style="width:220px" v-model="dataForm.pubDate" type="datetime" format="YYYY-MM-DD HH:mm:ss" value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker>
           </el-form-item>
         </el-col>
         <el-col span="12">
           <el-form-item :label="'Creator'">
-            <el-input v-model="dataForm.author"></el-input>
+            <el-input  style="width:220px"  v-model="dataForm.author"></el-input>
           </el-form-item>
         </el-col>
       </el-row>
       <el-row v-if="dataForm.categoryId == 2">
         <el-col span="12">
           <el-form-item prop="eventTime" label="Event Time">
-            <el-date-picker v-model="dataForm.eventTime" type="datetime" format="YYYY-MM-DD HH:mm:ss" value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker>
+             <el-input  style="width:220px" v-model="dataForm.eventTime"></el-input>
+            <!-- <el-date-picker v-model="dataForm.eventTime" type="datetime" format="YYYY-MM-DD HH:mm:ss" value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker> -->
           </el-form-item>
         </el-col>
         <el-col span="12">
           <el-form-item :label="'Location'">
-            <el-input v-model="dataForm.location"></el-input>
+            <el-input  style="width:220px" v-model="dataForm.location"></el-input>
           </el-form-item>
         </el-col>
       </el-row>
@@ -98,7 +99,7 @@ const rules = ref({
   title: [{required: true, message: t("validate.required"), trigger: "blur"}],
   categoryName: [{required: true, message: t("validate.required"), trigger: "change"}],
   content: [{required: true, message: t("validate.required"), trigger: "blur"}],
-  eventTime: [{required: true, message: t("validate.required"), trigger: "blur"}],
+  // eventTime: [{required: true, message: t("validate.required"), trigger: "blur"}],
   pubDate: [{required: true, message: t("validate.required"), trigger: "blur"}],
 });
 
@@ -111,7 +112,7 @@ const init = (id?: number) => {
     dataFormRef.value.resetFields();
   }
   Object.assign(dataForm, {
-    eventTime: (new Date()).Format("yyyy-MM-dd HH:mm:ss"),
+    // eventTime: (new Date()).Format("yyyy-MM-dd HH:mm:ss"),
     pubDate: (new Date()).Format("yyyy-MM-dd HH:mm:ss"),
     author: useAppStore().state.user.username,
   });

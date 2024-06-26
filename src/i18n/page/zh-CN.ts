@@ -567,4 +567,6 @@ t.service.createDate = "创建时间";
 t.service.content = "内容";
 t.service.summary = "简介";
 t.service.sort = "排序";
+t.service.selectCategory = "选择类别";
+
 export default t;

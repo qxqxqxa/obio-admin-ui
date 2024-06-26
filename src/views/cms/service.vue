@@ -2,7 +2,9 @@
   <div class="mod-demo__news">
     <el-form :inline="true" :model="state.dataForm" @keyup.enter="state.getDataList()">
       <el-form-item style="width: 190px;">
-        <el-tree-select clearable v-model="state.dataForm.categoryId" ref="articlesTree" :data="categories" :props="{ label: 'name', children: 'children' }" :render-after-expand="false" accordion :expand-on-click-node="true" node-key="id" :highlight-current="true"/>
+        <el-tree-select :placeholder="$t('service.selectCategory')" clearable v-model="state.dataForm.categoryId" ref="articlesTree" 
+        :data="categories" :props="{ label: 'name', children: 'children' }" :render-after-expand="false" 
+        accordion :expand-on-click-node="true" node-key="id" :highlight-current="true"/>
       </el-form-item>
       <el-form-item style="width: 190px;">
         <el-select clearable v-model="state.dataForm.status">
