@@ -6,7 +6,7 @@ pipeline {
                 sh '''
                 npm install
                 npm run build:prod
-                cp -R ./dist/* /var/www/admin-html
+                cp -R ./dist/* /var/www/admin
                 ''' 
             }
         }
