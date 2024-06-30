@@ -9,7 +9,7 @@ const prefix = `monaco-editor/esm/vs`;
 export default (config: UserConfig): UserConfigExport => {
   const mode = config.mode as string;
   return defineConfig({
-    base: "./",
+    base: "/",
     optimizeDeps: {
       include: [
         `${prefix}/language/json/json.worker`,
