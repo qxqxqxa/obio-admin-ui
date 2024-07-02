@@ -57,6 +57,15 @@ const editorConfig: Partial<IEditorConfig> = {
         // 从 res 中找到 url alt href ，然后插图图片
         insertFn(res.data.src, "", "");
       }
+    },
+    fontFamily: {
+      fontFamilyList: [
+        'Arial',
+        'Segoe UI',
+        'Tahoma',
+        'Verdana',
+        { name: '仿宋', value: '仿宋' },
+      ]
     }
   }
 };

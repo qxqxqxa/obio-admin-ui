@@ -51,7 +51,6 @@
     <template v-slot:footer>
       <el-button type="primary" @click="dataFormSubmitHandle(1)">Save</el-button>
       <el-button type="primary" @click="saveDraft()">Save Draft</el-button>
-      <el-button type="primary" @click="preView()">PreView</el-button>
       <el-button @click="visible = false">{{ $t("cancel") }}</el-button>
     </template>
   </el-dialog>
@@ -154,28 +153,6 @@ const dataFormSubmitHandle = (status: number) => {
 // 表单提交
 const saveDraft = () => {
   dataFormSubmitHandle(2)
-};
-// 预览功能
-const preView = () => {
-  ElMessage.success({message: "todo 预览功能"});
-  dataFormRef.value.validate((valid: boolean) => {
-    if (!valid) {
-      return false;
-    }
-    return false;
-    (!dataForm.id ? baseService.post : baseService.put)("/cms/articles", dataForm, {
-      "content-type": "application/x-www-form-urlencoded"
-    }).then(() => {
-      ElMessage.success({
-        message: t("prompt.success"),
-        duration: 500,
-        onClose: () => {
-          visible.value = false;
-          emit("refreshDataList");
-        }
-      });
-    });
-  });
 };
 // 上传之前
 const beforeUploadHandle = (file: IObject) => {
