@@ -1,6 +1,6 @@
 <template>
   <el-dialog v-model="visible" :title="$t('mail.config')" :close-on-click-modal="false" :close-on-press-escape="false">
-    <el-form :model="dataForm" :rules="rules" ref="dataFormRef" @keyup.enter="dataFormSubmitHandle()" label-width="120px">
+    <el-form :model="dataForm" :rules="rules" ref="dataFormRef" @keyup.enter="dataFormSubmitHandle()" label-width="140px">
       <el-form-item prop="smtp" :label="$t('mail.config')">
         <el-input v-model="dataForm.smtp" :placeholder="$t('mail.config')"></el-input>
       </el-form-item>
